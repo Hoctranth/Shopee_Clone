@@ -1,8 +1,9 @@
 import React from "react";
-import LoginForm from "../form/LoginForm";
+import BodyForm from "../form/BodyForm";
 import HeaderForm from "../form/HeaderForm";
 
 const BodyLogin = () => {
+  const [status, setStatus] = React.useState(true);
   return (
     <div>
       {/* Body*/}
@@ -11,8 +12,8 @@ const BodyLogin = () => {
           <div className="flex justify-space-between pt-10">
             <div className="w-3/5 "></div>
             <div className="bg-white w-1/2 shadow-md box-border rounded-sm overflow-hidden">
-              <HeaderForm></HeaderForm>
-              <LoginForm></LoginForm>
+              <HeaderForm status={status}></HeaderForm>
+              <BodyForm setStatus={setStatus} status={status}></BodyForm>
             </div>
           </div>
         </div>
